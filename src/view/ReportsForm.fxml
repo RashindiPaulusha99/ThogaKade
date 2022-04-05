@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="593.0" prefWidth="959.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="135.0" layoutY="28.0" prefHeight="35.0" prefWidth="688.0" text="Search Income" underline="true">
+         <font>
+            <Font name="Bookman Old Style Bold" size="28.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblIncomeDetails" layoutX="111.0" layoutY="200.0" prefHeight="284.0" prefWidth="736.0">
+        <columns>
+          <TableColumn fx:id="colOrderId" prefWidth="126.0" text="OrderId" />
+          <TableColumn fx:id="colCustomerId" prefWidth="154.0" text="CustomerId" />
+            <TableColumn fx:id="colOrderTime" prefWidth="217.0" text="OrderTime" />
+            <TableColumn fx:id="colCost" prefWidth="237.0" text="Cost" />
+        </columns>
+      </TableView>
+      <JFXDatePicker fx:id="DatePicker" layoutX="115.0" layoutY="116.0" prefHeight="31.0" prefWidth="275.0" />
+      <Label layoutX="508.0" layoutY="124.0" prefHeight="31.0" prefWidth="146.0" text="Net Amount :">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="684.0" layoutY="124.0" prefHeight="30.0" prefWidth="254.0" text="0.00/=" textFill="#e11f1f">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+      <Separator layoutX="38.0" layoutY="80.0" prefHeight="0.0" prefWidth="884.0" />
+   </children>
+</AnchorPane>

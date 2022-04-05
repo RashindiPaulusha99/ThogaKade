@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginContext" prefHeight="620.0" prefWidth="630.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="88.0" fitWidth="96.0" layoutX="259.0" layoutY="24.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/121105442-creative-illustration-of-default-avatar-profile-placeholder-isolated-on-background-art-design-grey-p.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtUsername" layoutX="101.0" layoutY="128.0" prefHeight="42.0" prefWidth="427.0" promptText="Enter Your UserName" />
+      <CheckBox layoutX="96.0" layoutY="293.0" mnemonicParsing="false" text="Remember Me" />
+      <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="313.0" layoutY="343.0" onAction="#openSelectItemForm" prefHeight="44.0" prefWidth="135.0" style="-fx-background-color: #0abde3; -fx-background-radius: 30;" text="LOG IN" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="148.0" layoutY="341.0" onAction="#backToHomeOnAction" prefHeight="44.0" prefWidth="126.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-border-color: #0abde3; -fx-border-radius: 30; -fx-border-width: 2;" text="CANCEL" textFill="#0abde3">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <Label layoutX="300.0" layoutY="417.0" text="OR" textFill="#a4b0be">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="107.0" layoutY="430.0" prefHeight="3.0" prefWidth="172.0" />
+      <Separator layoutX="343.0" layoutY="430.0" prefHeight="3.0" prefWidth="172.0" />
+      <Label layoutX="285.0" layoutY="464.0" text="Log In :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="48.0" fitWidth="65.0" layoutX="83.0" layoutY="502.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/fb-logo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="53.0" layoutX="158.0" layoutY="502.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/Twitter-logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="45.0" layoutX="240.0" layoutY="508.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/instagram.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="65.0" layoutX="305.0" layoutY="508.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/174857.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="55.0" fitWidth="53.0" layoutX="387.0" layoutY="502.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/Gmail-logo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="45.0" layoutX="472.0" layoutY="508.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/unnamed.jpg" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="txtPassword" layoutX="101.0" layoutY="206.0" prefHeight="42.0" prefWidth="427.0" promptText="Enter Your Password" />
+      <Label fx:id="errorMassageContext" layoutX="102.0" layoutY="177.0" prefHeight="21.0" prefWidth="427.0" textFill="RED" />
+      <Label fx:id="errorMassageContext1" layoutX="100.0" layoutY="254.0" prefHeight="21.0" prefWidth="427.0" textFill="RED" />
+   </children>
+</AnchorPane>

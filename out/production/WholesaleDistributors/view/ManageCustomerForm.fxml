@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="manageCustomerContext" prefHeight="956.0" prefWidth="1478.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageCustomerFormController">
+   <children>
+      <AnchorPane layoutX="-2.0" prefHeight="956.0" prefWidth="324.0" style="-fx-background-color: #D6A2E8;">
+         <effect>
+            <DropShadow height="30.33" radius="16.9975" spread="0.07" width="39.66" />
+         </effect>
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="50.0" onAction="#openSaveCustomerFormOnAction" prefHeight="67.0" prefWidth="306.0" style="-fx-background-color: #25CCF7; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Save Customer" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="179.0" onAction="#openSearchCustomerFormOnAction" prefHeight="63.0" prefWidth="306.0" style="-fx-background-color: #0be881; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Search Customer" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="311.0" onAction="#openUpdateCustomerFormOnAction" prefHeight="63.0" prefWidth="306.0" style="-fx-background-color: #55E6C1; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Update Customer" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="438.0" onAction="#openDeleteCustomerFormOnAction" prefHeight="67.0" prefWidth="306.0" style="-fx-background-color: #fc5c65; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Delete Customer" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="572.0" onAction="#openDisplayAllCustomerFormOnAction" prefHeight="67.0" prefWidth="306.0" style="-fx-background-color: #ffc048; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Display All Customer" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="704.0" onAction="#openPlaceOrderForm" prefHeight="63.0" prefWidth="306.0" style="-fx-background-color: #60a3bc; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Place Order" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="14.78" radius="11.555" spread="0.07" width="33.44" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="830.0" onAction="#openSearchOrderForm" prefHeight="67.0" prefWidth="306.0" style="-fx-background-color: #fd79a8; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Search Order" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXButton buttonType="RAISED" layoutX="1348.0" layoutY="20.0" onAction="#homePageOnAction" prefHeight="44.0" prefWidth="109.0" style="-fx-background-color: #74b9ff; -fx-border-color: white; -fx-border-width: 5;" text="Home">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="651.0" layoutY="472.0" prefHeight="0.0" prefWidth="796.0" />
+      <Label layoutX="350.0" layoutY="54.0" text="Category" underline="true">
+         <font>
+            <Font name="Arial Black" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="773.0" layoutY="50.0" text="Discounts" textAlignment="CENTER" textFill="#a170dd" underline="true">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect></Label>
+      <Label layoutX="773.0" layoutY="496.0" text="New Arrival" textFill="#ee5d5d" underline="true">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect></Label>
+      <Label layoutX="347.0" layoutY="104.0" text="Fruits &amp; Vegitables ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="346.0" layoutY="139.0" prefHeight="27.0" prefWidth="156.0" text="Rice &amp;Other Grains">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="347.0" layoutY="180.0" text="Spices">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="348.0" layoutY="219.0" prefHeight="27.0" prefWidth="77.0" text="All Flours">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="348.0" layoutY="258.0" prefHeight="27.0" prefWidth="77.0" text="Dry Fruits">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="346.0" layoutY="300.0" text="Edible Oils">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="346.0" layoutY="339.0" text="Beverages">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="346.0" layoutY="377.0" text="Diary Products">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="347.0" layoutY="418.0" prefHeight="27.0" prefWidth="212.0" text="Snacks &amp; Branded foods">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="348.0" layoutY="459.0" prefHeight="27.0" prefWidth="120.0" text="Backery items">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="346.0" layoutY="500.0" text="Sweet &amp; Desserts">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="344.0" layoutY="544.0" text="Porsonal care &amp; Cosmetics">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="346.0" layoutY="582.0" text="Baby care ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="346.0" layoutY="622.0" prefHeight="27.0" prefWidth="139.0" text="Medical Health">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="346.0" layoutY="664.0" text="Household needs">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="348.0" layoutY="708.0" text="Office &amp; Stationary">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="347.0" layoutY="751.0" text="Electrical &amp; Electronics products">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="619.0" layoutY="39.0" orientation="VERTICAL" prefHeight="878.0" prefWidth="0.0" />
+      <ImageView fitHeight="115.0" fitWidth="245.0" layoutX="651.0" layoutY="566.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/makeup+copy.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="115.0" fitWidth="245.0" layoutX="928.0" layoutY="568.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/unilever-to-review-beauty-brands.jpg" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="115.0" fitWidth="245.0" layoutX="1204.0" layoutY="568.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/chicco-baby-care-products-haul_1.jpg" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <AnchorPane layoutX="651.0" layoutY="227.0" prefHeight="211.0" prefWidth="245.0" style="-fx-background-color: #ffeaa7;">
+         <children>
+            <Label layoutX="16.0" layoutY="14.0" text="Fresh Fruits" />
+            <Label layoutX="14.0" layoutY="45.0" text="Seasonal Fruits" />
+            <Label layoutX="14.0" layoutY="78.0" text="Exotic Fruits" />
+            <Label layoutX="14.0" layoutY="112.0" prefHeight="21.0" prefWidth="61.0" text="mangoes" />
+            <Label layoutX="15.0" layoutY="143.0" text="Banana" />
+            <Label layoutX="16.0" layoutY="176.0" text="Papaya" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
+      <AnchorPane layoutX="924.0" layoutY="229.0" prefHeight="211.0" prefWidth="245.0" style="-fx-background-color: #ffeaa7;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Root Vegitables" />
+            <Label layoutX="14.0" layoutY="43.0" prefHeight="21.0" prefWidth="115.0" text="Exotic Vegitables" />
+            <Label layoutX="14.0" layoutY="74.0" text="Daily Vegitables" />
+            <Label layoutX="17.0" layoutY="106.0" prefHeight="21.0" prefWidth="115.0" text="Fresh Vegitables" />
+            <Label layoutX="15.0" layoutY="140.0" prefHeight="21.0" prefWidth="170.0" text="Potato ,Onion &amp;Tomato" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
+      <AnchorPane layoutX="1200.0" layoutY="227.0" prefHeight="211.0" prefWidth="254.0" style="-fx-background-color: #ffeaa7;">
+         <children>
+            <Label layoutX="15.0" layoutY="14.0" text="Chips &amp; Crisps" />
+            <Label layoutX="15.0" layoutY="46.0" text="Biscuits" />
+            <Label layoutX="14.0" layoutY="79.0" prefHeight="21.0" prefWidth="120.0" text="Noodles &amp; Pasta" />
+            <Label layoutX="18.0" layoutY="112.0" prefHeight="21.0" prefWidth="77.0" text="Namkeen" />
+            <Label layoutX="19.0" layoutY="144.0" text="Choco" />
+            <Label layoutX="18.0" layoutY="176.0" text="Sauces" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
+      <ImageView fitHeight="115.0" fitWidth="245.0" layoutX="650.0" layoutY="113.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/articol-fruits.jpg" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="115.0" fitWidth="245.0" layoutX="925.0" layoutY="113.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/fruits-vitamins-vegetables-many-people.jpg" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="115.0" fitWidth="254.0" layoutX="1200.0" layoutY="113.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/britannia-1-1.jpg" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <AnchorPane layoutX="650.0" layoutY="681.0" prefHeight="237.0" prefWidth="245.0" style="-fx-background-color: #ffeaa7;">
+         <children>
+            <Label layoutX="25.0" layoutY="24.0" text="Primer" />
+            <Label layoutX="23.0" layoutY="55.0" text="Foundation" />
+            <Label layoutX="23.0" layoutY="88.0" text="CC Cream" />
+            <Label layoutX="23.0" layoutY="122.0" prefHeight="21.0" prefWidth="61.0" text="Blush" />
+            <Label layoutX="24.0" layoutY="153.0" text="Concealer" />
+            <Label layoutX="25.0" layoutY="186.0" text="Powder" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
+      <AnchorPane layoutX="927.0" layoutY="680.0" prefHeight="237.0" prefWidth="245.0" style="-fx-background-color: #ffeaa7;">
+         <children>
+            <Label layoutX="24.0" layoutY="26.0" text="Oral Care" />
+            <Label layoutX="24.0" layoutY="58.0" text="Hair Care" />
+            <Label layoutX="24.0" layoutY="91.0" text="Mens Grooming" />
+            <Label layoutX="24.0" layoutY="125.0" prefHeight="21.0" prefWidth="139.0" text="Body &amp; Skin care" />
+            <Label layoutX="25.0" layoutY="156.0" text="Deos &amp; Perfumes" />
+            <Label layoutX="26.0" layoutY="189.0" text="Feminine &amp;Hygiene" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
+      <AnchorPane layoutX="1205.0" layoutY="680.0" prefHeight="237.0" prefWidth="245.0" style="-fx-background-color: #ffeaa7;">
+         <children>
+            <Label layoutX="26.0" layoutY="27.0" text="Diaper &amp; Wips" />
+            <Label layoutX="24.0" layoutY="65.0" text="Baby bath &amp; Hygiene" />
+            <Label layoutX="24.0" layoutY="98.0" text="Creams &amp; Lotions" />
+            <Label layoutX="24.0" layoutY="136.0" prefHeight="21.0" prefWidth="142.0" text="Feeding &amp; Nursing" />
+            <Label layoutX="22.0" layoutY="174.0" text="Baby food &amp; Formular" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
+      <Label layoutX="740.0" layoutY="100.0" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: #fffa65; -fx-border-color: #f0932b; -fx-border-width: 2;" text="  10%">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="634.0" layoutY="553.0" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: #ff7979; -fx-rotate: -40; -fx-border-color: white; -fx-border-width: 2;" text="  NEW">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="905.0" layoutY="553.0" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: #ff7979; -fx-rotate: -40; -fx-border-color: white; -fx-border-width: 2;" text="  NEW">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="1176.0" layoutY="553.0" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: #ff7979; -fx-rotate: -40; -fx-border-color: white; -fx-border-width: 2;" text="  NEW">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="994.0" layoutY="82.0" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: #fffa65; -fx-border-color: #f0932b; -fx-border-width: 2;" text="  10%">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="1277.0" layoutY="86.0" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: #fffa65; -fx-border-color: #f0932b; -fx-border-width: 2;" text="  10%">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

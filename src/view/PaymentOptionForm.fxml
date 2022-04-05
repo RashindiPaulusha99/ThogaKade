@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paymentContext" prefHeight="800.0" prefWidth="731.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PaymentOptionFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="16.0" layoutY="23.0" prefHeight="46.0" prefWidth="704.0" text="Make Your Payment" underline="true">
+         <font>
+            <Font name="Britannic Bold" size="29.0" />
+         </font>
+      </Label>
+      <Line endX="557.25" endY="-0.70709228515625" layoutX="139.0" layoutY="108.0" startX="-100.0" />
+      <Line endX="556.2928466796875" layoutX="139.0" layoutY="155.0" startX="-100.0" />
+      <Line endX="556.2928466796875" endY="-0.79290771484375" layoutX="139.0" layoutY="251.0" startX="-100.0" />
+      <Line endX="82.5" endY="25.5" layoutX="-44.0" layoutY="225.0" startX="82.0" startY="-116.0" />
+      <Line endX="82.5" endY="25.5" layoutX="614.0" layoutY="224.0" startX="82.0" startY="-116.0" />
+      <Line endX="82.5" endY="25.5" layoutX="64.0" layoutY="224.0" startX="82.0" startY="-116.0" />
+      <Line endX="82.5" endY="25.5" layoutX="169.0" layoutY="224.0" startX="82.0" startY="-116.0" />
+      <Line endX="82.0" endY="-58.0" layoutX="613.0" layoutY="368.0" startX="82.0" startY="-116.0" />
+      <Line endX="251.5" endY="-58.5" layoutX="446.0" layoutY="369.0" startX="75.5" startY="-58.5" />
+      <Line endX="82.5" endY="25.5" layoutX="305.0" layoutY="223.0" startX="82.0" startY="-116.0" />
+      <Line endX="82.0" endY="-58.0" layoutX="442.0" layoutY="368.0" startX="82.0" startY="-116.0" />
+      <Label layoutX="64.0" layoutY="120.0" text="Order Id" />
+      <Label layoutX="157.0" layoutY="120.0" text="Customer Id" />
+      <Label layoutX="272.0" layoutY="120.0" text="Order Date" />
+      <Line endX="82.5" endY="25.5" layoutX="440.0" layoutY="224.0" startX="82.0" startY="-116.0" />
+      <Label layoutX="421.0" layoutY="120.0" text="Order Time" />
+      <Label layoutX="563.0" layoutY="120.0" text="Total" />
+      <Label fx:id="lblOrderId" layoutX="66.0" layoutY="188.0" text="O-001">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCustomerId" layoutX="169.0" layoutY="188.0" text="C001">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderDate" layoutX="272.0" layoutY="188.0" text="2021-03-02">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderTime" layoutX="395.0" layoutY="188.0" prefHeight="28.0" prefWidth="122.0" text="12:23:02">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="537.0" layoutY="188.0" prefHeight="28.0" prefWidth="146.0" text="4000">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblFinalTotal" layoutX="532.0" layoutY="262.0" prefHeight="28.0" prefWidth="157.0" text="4000" textFill="#eb1010">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Line endX="202.0" endY="-59.0" layoutX="478.0" layoutY="349.0" startX="54.0" startY="-59.0" />
+      <Line endX="203.0" endY="-58.5" layoutX="478.0" layoutY="357.0" startX="56.0" startY="-58.5" />
+      <Label alignment="CENTER" layoutX="16.0" layoutY="356.0" prefHeight="28.0" prefWidth="704.0" text="Select Payment Option" textFill="#716cf2" underline="true">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="28.0" layoutY="337.0" prefHeight="1.0" prefWidth="688.0" />
+      <Label layoutX="66.0" layoutY="472.0" />
+      <JFXButton buttonType="RAISED" layoutX="133.0" layoutY="413.0" onAction="#cashPaymentOnAction" prefHeight="48.0" prefWidth="192.0" style="-fx-background-color: #fab1a0; -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 20;" text="Cash">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" disable="true" layoutX="133.0" layoutY="506.0" prefHeight="48.0" prefWidth="192.0" style="-fx-background-color: #fab1a0; -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 20;" text="Net Banking">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" disable="true" layoutX="133.0" layoutY="601.0" prefHeight="48.0" prefWidth="192.0" style="-fx-background-color: #fab1a0; -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 20;" text="QR">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" disable="true" layoutX="474.0" layoutY="413.0" prefHeight="48.0" prefWidth="192.0" style="-fx-background-color: #fab1a0; -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 20;" text="Cheque">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" disable="true" layoutX="474.0" layoutY="506.0" prefHeight="48.0" prefWidth="201.0" style="-fx-background-color: #fab1a0; -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 20;" text="Debit/Credit Card">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" disable="true" layoutX="475.0" layoutY="594.0" prefHeight="48.0" prefWidth="201.0" style="-fx-background-color: #fab1a0; -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 20;" text="PayPal">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="345.0" layoutY="707.0" onAction="#paymentOnAction" prefHeight="50.0" prefWidth="86.0" style="-fx-background-color: red; -fx-background-radius: 30;" text="PAY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="46.0" fitWidth="56.0" layoutX="65.0" layoutY="507.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/download%20(2).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="46.0" fitWidth="56.0" layoutX="407.0" layoutY="414.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/download%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="46.0" fitWidth="56.0" layoutX="407.0" layoutY="507.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/download.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="46.0" fitWidth="56.0" layoutX="407.0" layoutY="595.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/download.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="46.0" fitWidth="56.0" layoutX="65.0" layoutY="414.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/png-clipart-advance-payment-computer-icons-money-cash-payment-icon-dollar-bill-illustration-miscellaneous-angle.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="46.0" fitWidth="56.0" layoutX="65.0" layoutY="602.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/download%20(4).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

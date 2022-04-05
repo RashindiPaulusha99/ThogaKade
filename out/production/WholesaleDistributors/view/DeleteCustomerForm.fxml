@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="676.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeleteCustomerFormController">
+   <children>
+      <ImageView fitHeight="678.0" fitWidth="608.0" layoutX="-6.0" opacity="0.08" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/download.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="9.0" layoutY="30.0" prefHeight="33.0" prefWidth="591.0" text="Delete Customer" underline="true">
+         <font>
+            <Font name="Britannic Bold" size="29.0" />
+         </font>
+      </Label>
+      <Separator layoutX="15.0" layoutY="81.0" prefHeight="7.0" prefWidth="565.0" />
+      <TextField fx:id="txtId" layoutX="54.0" layoutY="123.0" onAction="#selectCustomerOnAction" prefHeight="41.0" prefWidth="502.0" promptText="Customer Id :" />
+      <TextField fx:id="txtTitle" layoutX="54.0" layoutY="188.0" prefHeight="41.0" prefWidth="502.0" promptText="Customer Title :" />
+      <TextField fx:id="txtName" layoutX="54.0" layoutY="254.0" prefHeight="41.0" prefWidth="502.0" promptText="Customer Name :" />
+      <TextField fx:id="txtAddress" layoutX="54.0" layoutY="321.0" prefHeight="41.0" prefWidth="502.0" promptText="Customer Address :" />
+      <TextField fx:id="txtPostalCode" layoutX="54.0" layoutY="515.0" prefHeight="41.0" prefWidth="502.0" promptText="Postal Code :" />
+      <TextField fx:id="txtCity" layoutX="54.0" layoutY="386.0" prefHeight="41.0" prefWidth="502.0" promptText="City :" />
+      <JFXButton buttonType="RAISED" layoutX="273.0" layoutY="590.0" onAction="#deleteCustomerOnAction" prefHeight="49.0" prefWidth="282.0" style="-fx-background-color: #fc5c65; -fx-background-radius: 30;" text="DELETE CUSTOMER" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Consolas Bold" size="27.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtProvince" layoutX="54.0" layoutY="450.0" prefHeight="41.0" prefWidth="502.0" promptText="Province :" />
+   </children>
+</AnchorPane>

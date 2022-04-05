@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="620.0" prefWidth="602.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SaveItemFormController">
+   <children>
+      <ImageView fitHeight="630.0" fitWidth="602.0" opacity="0.14" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/35-350184_icon-clipart-download-small-save-icon-png-transparent.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="30.0" prefHeight="33.0" prefWidth="591.0" text="Save Item" underline="true">
+         <font>
+            <Font name="Britannic Bold" size="29.0" />
+         </font>
+      </Label>
+      <Separator layoutX="23.0" layoutY="88.0" prefHeight="7.0" prefWidth="565.0" />
+      <TextField fx:id="txtItemCode" layoutX="55.0" layoutY="128.0" prefHeight="41.0" prefWidth="502.0" promptText="Item Code :" />
+      <TextField fx:id="txtPackSize" layoutX="55.0" layoutY="261.0" prefHeight="41.0" prefWidth="502.0" promptText="Pack Size :" />
+      <TextField fx:id="txtUnitPrice" layoutX="55.0" layoutY="328.0" prefHeight="41.0" prefWidth="502.0" promptText="Unit Price :" />
+      <TextField fx:id="txtqtyOnHand" layoutX="55.0" layoutY="463.0" prefHeight="41.0" prefWidth="502.0" promptText="Quantity On Hand :" />
+      <JFXButton buttonType="RAISED" layoutX="269.0" layoutY="536.0" onAction="#saveItemOnAction" prefHeight="49.0" prefWidth="288.0" style="-fx-background-color: #25CCF7; -fx-background-radius: 30;" text="SAVE ITEM" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Consolas Bold" size="27.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtDiscount" layoutX="55.0" layoutY="393.0" prefHeight="41.0" prefWidth="502.0" promptText="Discount :" />
+      <ComboBox fx:id="cmbDescription" layoutX="55.0" layoutY="194.0" prefHeight="41.0" prefWidth="502.0" promptText="Description :" />
+   </children>
+</AnchorPane>
