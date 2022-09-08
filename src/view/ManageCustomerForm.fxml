@@ -15,7 +15,7 @@
    <children>
       <ImageView fitHeight="965.0" fitWidth="1478.0" layoutY="-1.0" pickOnBounds="true">
          <image>
-            <Image url="@../assets/HD-wallpaper-fruits-fruits-vegetables-fruit-vegetable.jpg" />
+            <Image url="@../assets/customer.jpg" />
          </image>
       </ImageView>
       <JFXButton buttonType="RAISED" layoutX="22.0" layoutY="17.0" onAction="#homePageOnAction" prefHeight="44.0" prefWidth="109.0" style="-fx-border-color: white; -fx-border-width: 2;" text="Home" textFill="WHITE">

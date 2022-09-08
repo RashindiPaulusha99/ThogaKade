@@ -13,7 +13,7 @@
    <children>
       <ImageView fitHeight="956.0" fitWidth="1481.0" pickOnBounds="true">
          <image>
-            <Image url="@../assets/GettyImages-1050723690.jpg" />
+            <Image url="@../assets/dash.jpg" />
          </image>
       </ImageView>
       <Label layoutX="24.0" layoutY="2.0" text="R&amp;P">
@@ -48,12 +48,12 @@
             <Font name="Script MT Bold" size="100.0" />
          </font>
       </Label>
-      <Label layoutX="214.0" layoutY="227.0" text="WHOLESALE" textFill="WHITE">
+      <Label layoutX="222.0" layoutY="281.0" text="WHOLESALE" textFill="WHITE">
          <font>
             <Font name="Algerian" size="80.0" />
          </font>
       </Label>
-      <Label layoutX="192.0" layoutY="288.0" text="Distributors" textFill="WHITE">
+      <Label layoutX="198.0" layoutY="371.0" text="Distributors" textFill="WHITE">
          <font>
             <Font name="Algerian" size="80.0" />
          </font>

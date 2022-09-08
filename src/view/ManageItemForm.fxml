@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXComboBox?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -17,7 +17,7 @@
    <children>
       <ImageView fitHeight="958.0" fitWidth="1478.0" pickOnBounds="true">
          <image>
-            <Image url="@../assets/GettyImages-1050723690.jpg" />
+            <Image url="@../assets/item.jpg" />
          </image>
       </ImageView>
       <JFXButton buttonType="RAISED" layoutX="16.0" layoutY="14.0" onAction="#homePageOnAction" prefHeight="44.0" prefWidth="109.0" style="-fx-border-color: white; -fx-border-width: 3;" text="Home" textFill="WHITE">
@@ -109,22 +109,22 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="147.0" layoutY="79.0" text="Date :" textFill="WHITE">
+            <Label layoutX="146.0" layoutY="111.0" text="Date :" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="lblDate" layoutX="217.0" layoutY="79.0" prefHeight="31.0" prefWidth="135.0" text="2021-08-22" textFill="WHITE">
+            <Label fx:id="lblDate" layoutX="216.0" layoutY="111.0" prefHeight="31.0" prefWidth="135.0" text="2021-08-22" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="147.0" layoutY="124.0" prefHeight="26.0" prefWidth="68.0" text="Total :" textFill="WHITE">
+            <Label layoutX="673.0" layoutY="111.0" prefHeight="26.0" prefWidth="68.0" text="Total :" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="lblTotal" layoutX="244.0" layoutY="122.0" prefHeight="31.0" prefWidth="114.0" text="0.00/-" textFill="RED">
+            <Label fx:id="lblTotal" layoutX="770.0" layoutY="109.0" prefHeight="31.0" prefWidth="200.0" text="0.00/-" textFill="RED">
                <font>
                   <Font size="20.0" />
                </font>
@@ -136,11 +136,6 @@
             <Font name="Britannic Bold" size="57.0" />
          </font>
       </Label>
-      <ImageView fitHeight="324.0" fitWidth="495.0" layoutX="345.0" layoutY="241.0" pickOnBounds="true">
-         <image>
-            <Image url="@../assets/stand.png" />
-         </image>
-      </ImageView>
       <Label alignment="CENTER" layoutX="442.0" layoutY="334.0" prefHeight="35.0" prefWidth="244.0" text="Most Movable Item" textFill="WHITE" underline="true">
          <font>
             <Font name="System Bold" size="24.0" />
@@ -155,11 +150,6 @@
          </cursor>
       </JFXButton>
       <TextField fx:id="txtMostItem" layoutX="453.0" layoutY="464.0" prefHeight="31.0" prefWidth="265.0" />
-      <ImageView fitHeight="324.0" fitWidth="495.0" layoutX="878.0" layoutY="242.0" pickOnBounds="true">
-         <image>
-            <Image url="@../assets/stand.png" />
-         </image>
-      </ImageView>
       <Label alignment="CENTER" layoutX="968.0" layoutY="327.0" prefHeight="35.0" prefWidth="244.0" text="Least Movable Item" textFill="WHITE" underline="true">
          <font>
             <Font name="System Bold" size="24.0" />
@@ -174,27 +164,27 @@
          </cursor>
       </JFXButton>
       <TextField fx:id="txtLessItem" layoutX="969.0" layoutY="448.0" prefHeight="31.0" prefWidth="276.0" />
-      <Label fx:id="lblDescription" layoutX="497.0" layoutY="165.0" prefHeight="32.0" prefWidth="235.0" textFill="#1b8be8">
+      <Label fx:id="lblDescription" layoutX="795.0" layoutY="181.0" prefHeight="32.0" prefWidth="235.0" textFill="#1b8be8">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label fx:id="lblStock" layoutX="497.0" layoutY="215.0" prefHeight="32.0" prefWidth="235.0" textFill="RED">
+      <Label fx:id="lblStock" layoutX="795.0" layoutY="231.0" prefHeight="32.0" prefWidth="235.0" textFill="RED">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
-      <Label layoutX="388.0" layoutY="166.0" prefHeight="30.0" prefWidth="84.0" text="Type  :" textFill="WHITE">
+      <Label layoutX="686.0" layoutY="182.0" prefHeight="30.0" prefWidth="84.0" text="Type  :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="388.0" layoutY="216.0" prefHeight="30.0" prefWidth="84.0" text="Stock :" textFill="WHITE">
+      <Label layoutX="686.0" layoutY="232.0" prefHeight="30.0" prefWidth="84.0" text="Stock :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <JFXComboBox fx:id="cmbItemCode" focusColor="WHITE" layoutX="388.0" layoutY="113.0" prefHeight="31.0" prefWidth="244.0" promptText="Item Code :" unFocusColor="WHITE" />
+      <ComboBox fx:id="cmbItemCode" layoutX="686.0" layoutY="137.0" prefHeight="31.0" prefWidth="258.0" promptText="Item Code :" style="-fx-background-color: white;" />
    </children>
    <cursor>
       <Cursor fx:constant="HAND" />

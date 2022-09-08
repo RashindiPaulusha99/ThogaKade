@@ -3,24 +3,17 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.QuadCurve?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="dashBoardContext" opacity="0.99" prefHeight="956.0" prefWidth="1478.0" style="-fx-background-color: #c8d6e5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+<AnchorPane fx:id="dashBoardContext" opacity="0.99" prefHeight="956.0" prefWidth="1478.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
    <children>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="658.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" />
-      <QuadCurve controlX="-868.0" controlY="-583.0" endX="-452.0" endY="375.4171142578125" fill="#92f5ed" layoutX="452.0" layoutY="312.0" startX="137.65509033203125" startY="-312.0" stroke="BLACK" strokeType="INSIDE">
-         <effect>
-            <DropShadow height="33.44" radius="28.849999999999998" spread="0.1" width="83.96" />
-         </effect></QuadCurve>
-      <ImageView fitHeight="95.0" fitWidth="99.0" layoutX="-3.0" layoutY="-5.0" pickOnBounds="true">
+      <ImageView fitHeight="956.0" fitWidth="1481.0" pickOnBounds="true">
          <image>
-            <Image url="@../assets/237-2375114_warehouse-icon-blue-news-feed-icon-hd-png.png" />
+            <Image url="@../assets/dash.jpg" />
          </image>
       </ImageView>
       <Label layoutX="24.0" layoutY="2.0" text="R&amp;P">
@@ -28,119 +21,7 @@
             <Font name="Script MT Bold" size="20.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="11.0" layoutY="121.0" opacity="0.83" prefHeight="222.0" prefWidth="415.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-rotate: -50;">
-         <children>
-            <Label layoutX="109.0" layoutY="3.0" text="R&amp;P">
-               <font>
-                  <Font name="Script MT Bold" size="77.0" />
-               </font>
-            </Label>
-            <Label layoutX="43.0" layoutY="92.0" text="WHOLESALE">
-               <font>
-                  <Font name="Algerian" size="55.0" />
-               </font>
-            </Label>
-            <Label layoutX="21.0" layoutY="153.0" text="Distributors">
-               <font>
-                  <Font name="Algerian" size="55.0" />
-               </font>
-            </Label>
-         </children>
-         <effect>
-            <DropShadow height="39.66" radius="20.884999999999998" spread="0.16" width="45.88" />
-         </effect>
-      </AnchorPane>
-      <AnchorPane layoutY="777.0" prefHeight="179.0" prefWidth="1480.0" style="-fx-background-color: white;">
-         <children>
-            <Label layoutX="42.0" layoutY="14.0" text="Follow Us :" underline="true">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Label>
-            <Label layoutX="1122.0" layoutY="26.0" text="Contact Us :" underline="true">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Label>
-            <Label layoutX="362.0" layoutY="26.0" prefHeight="28.0" prefWidth="111.0" text="Information :" underline="true">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Label>
-            <Label layoutX="1125.0" layoutY="68.0" text="E-Mail : R&amp;PDistributors@gmail.con" />
-            <Label layoutX="1125.0" layoutY="97.0" text="Mobile : (+94)718220009" />
-            <Label layoutX="727.0" layoutY="26.0" text="Location :" underline="true">
-               <font>
-                  <Font size="19.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="28.0" fitWidth="42.0" layoutX="53.0" layoutY="42.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../assets/fb-logo.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="24.0" fitWidth="34.0" layoutX="57.0" layoutY="77.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../assets/Twitter-logo.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="21.0" fitWidth="26.0" layoutX="61.0" layoutY="108.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../assets/instagram.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="21.0" fitWidth="34.0" layoutX="53.0" layoutY="137.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../assets/174857.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="362.0" layoutY="68.0" text="About Us" />
-            <Label layoutX="362.0" layoutY="97.0" text="Privacy Notice" />
-            <Label layoutX="361.0" layoutY="127.0" text="Condition Of Use" />
-            <Label layoutX="694.0" layoutY="68.0" text="No : 4/2 ,ABC Road , Galle" />
-            <Separator layoutX="245.0" layoutY="19.0" orientation="VERTICAL" prefHeight="150.0" prefWidth="6.0" />
-            <Separator layoutX="601.0" layoutY="19.0" orientation="VERTICAL" prefHeight="150.0" prefWidth="6.0" />
-            <Separator layoutX="985.0" layoutY="14.0" orientation="VERTICAL" prefHeight="150.0" prefWidth="6.0" />
-         </children></AnchorPane>
-      <AnchorPane layoutX="511.0" layoutY="146.0" prefHeight="432.0" prefWidth="482.0" style="-fx-rotate: -50; -fx-background-color: white;">
-         <children>
-            <ImageView fitHeight="188.0" fitWidth="208.0" layoutX="16.0" layoutY="15.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../assets/moving-supplier-who-counts-cardboard-box-88561026.jpg" />
-               </image>
-               <effect>
-                  <DropShadow height="45.88" radius="20.884999999999998" spread="0.07" width="39.66" />
-               </effect>
-            </ImageView>
-            <ImageView fitHeight="188.0" fitWidth="226.0" layoutX="241.0" layoutY="12.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../assets/istockphoto-886646640-612x612.jpg" />
-               </image>
-               <effect>
-                  <DropShadow height="30.33" radius="15.442499999999999" spread="0.07" width="33.44" />
-               </effect>
-            </ImageView>
-            <ImageView fitHeight="195.0" fitWidth="211.0" layoutX="18.0" layoutY="222.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../assets/depositphotos_131102446-stock-illustration-supermarket-grocery-store.jpg" />
-               </image>
-               <effect>
-                  <DropShadow height="39.66" radius="18.5525" spread="0.07" width="36.55" />
-               </effect>
-            </ImageView>
-            <ImageView fitHeight="198.0" fitWidth="222.0" layoutX="247.0" layoutY="216.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../assets/11c93bf340533599041a12cb08fab32a.jpg" />
-               </image>
-               <effect>
-                  <DropShadow height="30.33" radius="15.442499999999999" spread="0.05" width="33.44" />
-               </effect>
-            </ImageView>
-         </children>
-         <effect>
-            <DropShadow height="42.77" radius="20.1075" spread="0.3" width="39.66" />
-         </effect></AnchorPane>
-      <JFXButton buttonType="RAISED" layoutX="1056.0" layoutY="533.0" onAction="#openLoginForm" prefHeight="56.0" prefWidth="340.0" style="-fx-background-color: #48dbfb; -fx-background-radius: 30; -fx-border-radius: 30;" text="LOGIN AS ADMIN" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="25.0" layoutY="787.0" onAction="#openLoginForm" prefHeight="56.0" prefWidth="244.0" style="-fx-background-color: #48dbfb; -fx-background-radius: 30; -fx-border-radius: 30;" text="LOGIN AS ADMIN" textFill="WHITE">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
@@ -151,7 +32,7 @@
             <DropShadow spread="0.02" />
          </effect>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="1056.0" layoutY="612.0" onAction="#openLoginForm" prefHeight="56.0" prefWidth="340.0" style="-fx-background-color: #48dbfb; -fx-background-radius: 30; -fx-border-radius: 30;" text="LOGIN AS CASHIER" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="25.0" layoutY="866.0" onAction="#openLoginForm" prefHeight="56.0" prefWidth="244.0" style="-fx-background-color: #48dbfb; -fx-background-radius: 30; -fx-border-radius: 30;" text="LOGIN AS CASHIER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
@@ -162,5 +43,20 @@
             <DropShadow spread="0.04" />
          </effect>
       </JFXButton>
+      <Label layoutX="337.0" layoutY="86.0" text="R&amp;P" textFill="WHITE">
+         <font>
+            <Font name="Script MT Bold" size="100.0" />
+         </font>
+      </Label>
+      <Label layoutX="222.0" layoutY="281.0" text="WHOLESALE" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="80.0" />
+         </font>
+      </Label>
+      <Label layoutX="198.0" layoutY="371.0" text="Distributors" textFill="WHITE">
+         <font>
+            <Font name="Algerian" size="80.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
