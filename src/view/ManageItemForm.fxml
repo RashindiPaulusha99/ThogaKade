@@ -4,90 +4,23 @@
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="manageItemContext" prefHeight="956.0" prefWidth="1478.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageItemFormController">
    <children>
-      <AnchorPane prefHeight="959.0" prefWidth="293.0" style="-fx-background-color: #D6A2E8;">
-         <effect>
-            <DropShadow height="30.33" radius="16.9975" spread="0.07" width="39.66" />
-         </effect>
-         <children>
-            <JFXButton buttonType="RAISED" layoutX="2.0" layoutY="615.0" onAction="#openDisplayAllItemFormOnAction" prefHeight="67.0" prefWidth="285.0" style="-fx-background-color: #ffc048; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Display All Item" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <DropShadow />
-               </effect>
-               <font>
-                  <Font name="System Bold" size="29.0" />
-               </font>
-            </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="2.0" layoutY="87.0" onAction="#openSaveItemFormOnAction" prefHeight="67.0" prefWidth="285.0" style="-fx-background-color: #25CCF7; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Save Item" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <DropShadow />
-               </effect>
-               <font>
-                  <Font name="System Bold" size="29.0" />
-               </font>
-            </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="2.0" layoutY="219.0" onAction="#openSearchItemFormOnAction" prefHeight="67.0" prefWidth="285.0" style="-fx-background-color: #0be881; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Search Item" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <DropShadow />
-               </effect>
-               <font>
-                  <Font name="System Bold" size="29.0" />
-               </font>
-            </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="2.0" layoutY="355.0" onAction="#openUpdateItemFormOnAction" prefHeight="67.0" prefWidth="285.0" style="-fx-background-color: #55E6C1; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Update Item" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <DropShadow />
-               </effect>
-               <font>
-                  <Font name="System Bold" size="29.0" />
-               </font>
-            </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="2.0" layoutY="485.0" onAction="#openDeleteItemFormOnAction" prefHeight="67.0" prefWidth="285.0" style="-fx-background-color: #fc5c65; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Delete Item" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <DropShadow />
-               </effect>
-               <font>
-                  <Font name="System Bold" size="29.0" />
-               </font>
-            </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="2.0" layoutY="751.0" onAction="#openReportsFormOnAction" prefHeight="67.0" prefWidth="285.0" style="-fx-background-color: #fd79a8; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Search Reports" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <DropShadow />
-               </effect>
-               <font>
-                  <Font name="System Bold" size="29.0" />
-               </font>
-            </JFXButton>
-         </children>
-      </AnchorPane>
-      <JFXButton buttonType="RAISED" layoutX="1345.0" layoutY="21.0" onAction="#homePageOnAction" prefHeight="44.0" prefWidth="109.0" style="-fx-background-color: #74b9ff; -fx-border-color: white; -fx-border-width: 5;" text="Home">
+      <ImageView fitHeight="958.0" fitWidth="1478.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/GettyImages-1050723690.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="16.0" layoutY="14.0" onAction="#homePageOnAction" prefHeight="44.0" prefWidth="109.0" style="-fx-border-color: white; -fx-border-width: 3;" text="Home" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -95,95 +28,173 @@
             <Font name="System Bold" size="22.0" />
          </font>
       </JFXButton>
-      <Label alignment="CENTER" layoutX="763.0" layoutY="27.0" prefHeight="47.0" prefWidth="135.0" text="Stock" underline="true">
+      <JFXButton buttonType="RAISED" layoutX="16.0" layoutY="492.0" onAction="#openDisplayAllItemFormOnAction" prefHeight="67.0" prefWidth="285.0" style="-fx-background-color: #ffc048; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Display All Item" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
          <font>
-            <Font name="Britannic Bold" size="46.0" />
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="215.0" onAction="#openSaveItemFormOnAction" prefHeight="67.0" prefWidth="285.0" style="-fx-background-color: #25CCF7; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Save Item" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="284.0" onAction="#openSearchItemFormOnAction" prefHeight="67.0" prefWidth="285.0" style="-fx-background-color: #0be881; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Search Item" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="353.0" onAction="#openUpdateItemFormOnAction" prefHeight="67.0" prefWidth="285.0" style="-fx-background-color: #55E6C1; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Update Item" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="422.0" onAction="#openDeleteItemFormOnAction" prefHeight="67.0" prefWidth="285.0" style="-fx-background-color: #fc5c65; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Delete Item" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="562.0" onAction="#openReportsFormOnAction" prefHeight="67.0" prefWidth="285.0" style="-fx-background-color: #fd79a8; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Search Reports" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="338.0" layoutY="526.0" prefHeight="411.0" prefWidth="1114.0">
+         <children>
+            <TableView fx:id="tblTodayIncome" layoutX="146.0" layoutY="173.0" prefHeight="224.0" prefWidth="823.0" style="-fx-background-color: white;">
+              <columns>
+                <TableColumn fx:id="colOrderId" prefWidth="134.0" text="Order Id" />
+                <TableColumn fx:id="colCustomerId" prefWidth="184.0" text="Customer Id" />
+                  <TableColumn fx:id="colOrderTime" prefWidth="267.0" text="Order Time" />
+                  <TableColumn fx:id="colCost" prefWidth="237.0" text="Cost" />
+              </columns>
+            </TableView>
+            <Label alignment="CENTER" layoutX="411.0" layoutY="58.0" prefHeight="35.0" prefWidth="244.0" text="Today Income" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="147.0" layoutY="79.0" text="Date :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" layoutX="217.0" layoutY="79.0" prefHeight="31.0" prefWidth="135.0" text="2021-08-22" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="147.0" layoutY="124.0" prefHeight="26.0" prefWidth="68.0" text="Total :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotal" layoutX="244.0" layoutY="122.0" prefHeight="31.0" prefWidth="114.0" text="0.00/-" textFill="RED">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="739.0" layoutY="12.0" prefHeight="58.0" prefWidth="181.0" text="Stock" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Britannic Bold" size="57.0" />
          </font>
       </Label>
-      <Label fx:id="lblDescription" layoutX="469.0" layoutY="167.0" prefHeight="32.0" prefWidth="550.0" textFill="#1b8be8">
+      <ImageView fitHeight="324.0" fitWidth="495.0" layoutX="345.0" layoutY="241.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/stand.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="442.0" layoutY="334.0" prefHeight="35.0" prefWidth="244.0" text="Most Movable Item" textFill="WHITE" underline="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="518.0" layoutY="384.0" onAction="#searchMostMovableItem" style="-fx-background-color: white; -fx-border-color: #497cea;" text="Search" textFill="#497cea">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtMostItem" layoutX="453.0" layoutY="464.0" prefHeight="31.0" prefWidth="265.0" />
+      <ImageView fitHeight="324.0" fitWidth="495.0" layoutX="878.0" layoutY="242.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/stand.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="968.0" layoutY="327.0" prefHeight="35.0" prefWidth="244.0" text="Least Movable Item" textFill="WHITE" underline="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="1037.0" layoutY="374.0" onAction="#searchLessMovableItem" prefHeight="56.0" prefWidth="114.0" style="-fx-background-color: white; -fx-border-color: #497cea;" text="Search" textFill="#497cea">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtLessItem" layoutX="969.0" layoutY="448.0" prefHeight="31.0" prefWidth="276.0" />
+      <Label fx:id="lblDescription" layoutX="497.0" layoutY="165.0" prefHeight="32.0" prefWidth="235.0" textFill="#1b8be8">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label fx:id="lblStock" layoutX="469.0" layoutY="220.0" prefHeight="32.0" prefWidth="323.0" textFill="#f82525">
+      <Label fx:id="lblStock" layoutX="497.0" layoutY="215.0" prefHeight="32.0" prefWidth="235.0" textFill="RED">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
-      <Label layoutX="360.0" layoutY="168.0" prefHeight="30.0" prefWidth="84.0" text="Type  :">
+      <Label layoutX="388.0" layoutY="166.0" prefHeight="30.0" prefWidth="84.0" text="Type  :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <JFXComboBox fx:id="cmbItemCode" layoutX="360.0" layoutY="92.0" prefHeight="31.0" prefWidth="244.0" promptText="Item Code :" />
-      <Label layoutX="360.0" layoutY="221.0" prefHeight="30.0" prefWidth="84.0" text="Stock :">
+      <Label layoutX="388.0" layoutY="216.0" prefHeight="30.0" prefWidth="84.0" text="Stock :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Separator layoutX="323.0" layoutY="300.0" prefHeight="0.0" prefWidth="1115.0" />
-      <Label alignment="CENTER" layoutX="360.0" layoutY="334.0" prefHeight="35.0" prefWidth="340.0" text="Most Movable Item" underline="true">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Label>
-      <Label alignment="CENTER" layoutX="978.0" layoutY="334.0" prefHeight="35.0" prefWidth="340.0" text="Least Movable Item" underline="true">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Label>
-      <JFXButton buttonType="RAISED" layoutX="461.0" layoutY="381.0" onAction="#searchMostMovableItem" style="-fx-background-color: white; -fx-border-color: #497cea;" text="Search" textFill="#497cea">
-         <font>
-            <Font name="System Bold" size="25.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="1084.0" layoutY="381.0" onAction="#searchLessMovableItem" prefHeight="56.0" prefWidth="114.0" style="-fx-background-color: white; -fx-border-color: #497cea;" text="Search" textFill="#497cea">
-         <font>
-            <Font name="System Bold" size="25.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
-      <TextField fx:id="txtMostItem" layoutX="362.0" layoutY="455.0" prefHeight="31.0" prefWidth="312.0" />
-      <TextField fx:id="txtLessItem" layoutX="987.0" layoutY="455.0" prefHeight="31.0" prefWidth="323.0" />
-      <Separator layoutX="323.0" layoutY="529.0" prefHeight="0.0" prefWidth="1115.0" />
-      <Label alignment="CENTER" layoutX="631.0" layoutY="564.0" prefHeight="35.0" prefWidth="464.0" text="Today Income" underline="true">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="323.0" layoutY="599.0" text="Date :">
-         <font>
-            <Font name="System Bold" size="20.0" />
-         </font>
-      </Label>
-      <Label fx:id="lblDate" layoutX="393.0" layoutY="599.0" prefHeight="31.0" prefWidth="135.0" text="2021-08-22">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <TableView fx:id="tblTodayIncome" layoutX="576.0" layoutY="615.0" prefHeight="224.0" prefWidth="823.0">
-        <columns>
-          <TableColumn fx:id="colOrderId" prefWidth="134.0" text="Order Id" />
-          <TableColumn fx:id="colCustomerId" prefWidth="184.0" text="Customer Id" />
-            <TableColumn fx:id="colOrderTime" prefWidth="267.0" text="Order Time" />
-            <TableColumn fx:id="colCost" prefWidth="237.0" text="Cost" />
-        </columns>
-      </TableView>
-      <Label layoutX="325.0" layoutY="890.0" prefHeight="26.0" prefWidth="68.0" text="Total :">
-         <font>
-            <Font name="System Bold" size="20.0" />
-         </font>
-      </Label>
-      <Label fx:id="lblTotal" layoutX="422.0" layoutY="888.0" prefHeight="31.0" prefWidth="349.0" text="0.00/-" textFill="#d71111">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
+      <JFXComboBox fx:id="cmbItemCode" focusColor="WHITE" layoutX="388.0" layoutY="113.0" prefHeight="31.0" prefWidth="244.0" promptText="Item Code :" unFocusColor="WHITE" />
    </children>
    <cursor>
       <Cursor fx:constant="HAND" />

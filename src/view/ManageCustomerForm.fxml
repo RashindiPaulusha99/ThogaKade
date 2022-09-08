@@ -13,96 +13,12 @@
 
 <AnchorPane fx:id="manageCustomerContext" prefHeight="956.0" prefWidth="1478.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageCustomerFormController">
    <children>
-      <ImageView fitHeight="965.0" fitWidth="1478.0" layoutX="1.0" layoutY="-1.0" pickOnBounds="true">
+      <ImageView fitHeight="965.0" fitWidth="1478.0" layoutY="-1.0" pickOnBounds="true">
          <image>
-            <Image url="@../assets/GettyImages-1050723690.jpg" />
+            <Image url="@../assets/HD-wallpaper-fruits-fruits-vegetables-fruit-vegetable.jpg" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="-2.0" prefHeight="956.0" prefWidth="324.0" style="-fx-background-color: #D6A2E8;">
-         <effect>
-            <DropShadow height="30.33" radius="16.9975" spread="0.07" width="39.66" />
-         </effect>
-         <children>
-            <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="50.0" onAction="#openSaveCustomerFormOnAction" prefHeight="67.0" prefWidth="306.0" style="-fx-background-color: #25CCF7; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Save Customer" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <DropShadow />
-               </effect>
-               <font>
-                  <Font name="System Bold" size="27.0" />
-               </font>
-            </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="179.0" onAction="#openSearchCustomerFormOnAction" prefHeight="63.0" prefWidth="306.0" style="-fx-background-color: #0be881; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Search Customer" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <DropShadow />
-               </effect>
-               <font>
-                  <Font name="System Bold" size="27.0" />
-               </font>
-            </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="311.0" onAction="#openUpdateCustomerFormOnAction" prefHeight="63.0" prefWidth="306.0" style="-fx-background-color: #55E6C1; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Update Customer" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <DropShadow />
-               </effect>
-               <font>
-                  <Font name="System Bold" size="27.0" />
-               </font>
-            </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="438.0" onAction="#openDeleteCustomerFormOnAction" prefHeight="67.0" prefWidth="306.0" style="-fx-background-color: #fc5c65; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Delete Customer" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <DropShadow />
-               </effect>
-               <font>
-                  <Font name="System Bold" size="27.0" />
-               </font>
-            </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="572.0" onAction="#openDisplayAllCustomerFormOnAction" prefHeight="67.0" prefWidth="306.0" style="-fx-background-color: #ffc048; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Display All Customer" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <DropShadow />
-               </effect>
-               <font>
-                  <Font name="System Bold" size="27.0" />
-               </font>
-            </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="704.0" onAction="#openPlaceOrderForm" prefHeight="63.0" prefWidth="306.0" style="-fx-background-color: #60a3bc; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Place Order" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <DropShadow height="14.78" radius="11.555" spread="0.07" width="33.44" />
-               </effect>
-               <font>
-                  <Font name="System Bold" size="27.0" />
-               </font>
-            </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="830.0" onAction="#openSearchOrderForm" prefHeight="67.0" prefWidth="306.0" style="-fx-background-color: #fd79a8; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Search Order" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <DropShadow />
-               </effect>
-               <font>
-                  <Font name="System Bold" size="29.0" />
-               </font>
-            </JFXButton>
-         </children>
-      </AnchorPane>
-      <JFXButton buttonType="RAISED" layoutX="1348.0" layoutY="20.0" onAction="#homePageOnAction" prefHeight="44.0" prefWidth="109.0" style="-fx-background-color: #74b9ff; -fx-border-color: white; -fx-border-width: 5;" text="Home">
+      <JFXButton buttonType="RAISED" layoutX="22.0" layoutY="17.0" onAction="#homePageOnAction" prefHeight="44.0" prefWidth="109.0" style="-fx-border-color: white; -fx-border-width: 2;" text="Home" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -111,106 +27,106 @@
          </font>
       </JFXButton>
       <Separator layoutX="651.0" layoutY="472.0" prefHeight="0.0" prefWidth="796.0" />
-      <Label layoutX="350.0" layoutY="54.0" text="Category" underline="true">
+      <Label layoutX="350.0" layoutY="54.0" text="Category" textFill="WHITE" underline="true">
          <font>
             <Font name="Arial Black" size="19.0" />
          </font>
       </Label>
-      <Label layoutX="773.0" layoutY="50.0" text="Discounts" textAlignment="CENTER" textFill="#a170dd" underline="true">
+      <Label layoutX="820.0" layoutY="43.0" text="Discounts" textAlignment="CENTER" textFill="WHITE" underline="true">
          <font>
-            <Font name="System Bold" size="25.0" />
+            <Font name="System Bold" size="33.0" />
          </font>
          <effect>
             <Blend />
          </effect></Label>
-      <Label layoutX="773.0" layoutY="496.0" text="New Arrival" textFill="#ee5d5d" underline="true">
+      <Label layoutX="755.0" layoutY="491.0" text="New Arrival" textFill="WHITE" underline="true">
          <font>
-            <Font name="System Bold" size="25.0" />
+            <Font name="System Bold" size="31.0" />
          </font>
          <effect>
             <Blend />
          </effect></Label>
-      <Label layoutX="347.0" layoutY="104.0" text="Fruits &amp; Vegitables ">
+      <Label layoutX="347.0" layoutY="104.0" text="Fruits &amp; Vegitables " textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="346.0" layoutY="139.0" prefHeight="27.0" prefWidth="156.0" text="Rice &amp;Other Grains">
+      <Label layoutX="346.0" layoutY="139.0" prefHeight="27.0" prefWidth="156.0" text="Rice &amp;Other Grains" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="347.0" layoutY="180.0" text="Spices">
+      <Label layoutX="347.0" layoutY="180.0" text="Spices" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="348.0" layoutY="219.0" prefHeight="27.0" prefWidth="77.0" text="All Flours">
+      <Label layoutX="348.0" layoutY="219.0" prefHeight="27.0" prefWidth="77.0" text="All Flours" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="348.0" layoutY="258.0" prefHeight="27.0" prefWidth="77.0" text="Dry Fruits">
+      <Label layoutX="348.0" layoutY="258.0" prefHeight="27.0" prefWidth="77.0" text="Dry Fruits" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="346.0" layoutY="300.0" text="Edible Oils">
+      <Label layoutX="346.0" layoutY="300.0" text="Edible Oils" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="346.0" layoutY="339.0" text="Beverages">
+      <Label layoutX="346.0" layoutY="339.0" text="Beverages" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="346.0" layoutY="377.0" text="Diary Products">
+      <Label layoutX="346.0" layoutY="377.0" text="Diary Products" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="347.0" layoutY="418.0" prefHeight="27.0" prefWidth="212.0" text="Snacks &amp; Branded foods">
+      <Label layoutX="347.0" layoutY="418.0" prefHeight="27.0" prefWidth="212.0" text="Snacks &amp; Branded foods" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="348.0" layoutY="459.0" prefHeight="27.0" prefWidth="120.0" text="Backery items">
+      <Label layoutX="348.0" layoutY="459.0" prefHeight="27.0" prefWidth="120.0" text="Backery items" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="346.0" layoutY="500.0" text="Sweet &amp; Desserts">
+      <Label layoutX="346.0" layoutY="500.0" text="Sweet &amp; Desserts" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="344.0" layoutY="544.0" text="Porsonal care &amp; Cosmetics">
+      <Label layoutX="344.0" layoutY="544.0" text="Porsonal care &amp; Cosmetics" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="346.0" layoutY="582.0" text="Baby care ">
+      <Label layoutX="346.0" layoutY="582.0" text="Baby care " textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="346.0" layoutY="622.0" prefHeight="27.0" prefWidth="139.0" text="Medical Health">
+      <Label layoutX="346.0" layoutY="622.0" prefHeight="27.0" prefWidth="139.0" text="Medical Health" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="346.0" layoutY="664.0" text="Household needs">
+      <Label layoutX="346.0" layoutY="664.0" text="Household needs" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="348.0" layoutY="708.0" text="Office &amp; Stationary">
+      <Label layoutX="348.0" layoutY="708.0" text="Office &amp; Stationary" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="347.0" layoutY="751.0" text="Electrical &amp; Electronics products">
+      <Label layoutX="347.0" layoutY="751.0" text="Electrical &amp; Electronics products" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
@@ -382,5 +298,82 @@
             <DropShadow />
          </effect>
       </Label>
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="194.0" onAction="#openSaveCustomerFormOnAction" prefHeight="67.0" prefWidth="306.0" style="-fx-background-color: #25CCF7; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Save Customer" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="15.0" layoutY="264.0" onAction="#openSearchCustomerFormOnAction" prefHeight="63.0" prefWidth="306.0" style="-fx-background-color: #0be881; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Search Customer" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="329.0" onAction="#openUpdateCustomerFormOnAction" prefHeight="63.0" prefWidth="306.0" style="-fx-background-color: #55E6C1; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Update Customer" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="15.0" layoutY="395.0" onAction="#openDeleteCustomerFormOnAction" prefHeight="67.0" prefWidth="306.0" style="-fx-background-color: #fc5c65; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Delete Customer" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="15.0" layoutY="465.0" onAction="#openDisplayAllCustomerFormOnAction" prefHeight="67.0" prefWidth="306.0" style="-fx-background-color: #ffc048; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Display All Customer" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="536.0" onAction="#openPlaceOrderForm" prefHeight="63.0" prefWidth="306.0" style="-fx-background-color: #60a3bc; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Place Order" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow height="14.78" radius="11.555" spread="0.07" width="33.44" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="15.0" layoutY="602.0" onAction="#openSearchOrderForm" prefHeight="67.0" prefWidth="306.0" style="-fx-background-color: #fd79a8; -fx-background-radius: 40; -fx-border-color: white; -fx-border-radius: 40; -fx-border-width: 2;" text="Search Order" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
