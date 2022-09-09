@@ -44,6 +44,7 @@ Below you can see the languages architectures, tools I used  the project.
 
 ## Language
 * Java - JavaFX
+* MySQL
 
 ## Tools
 * IntelliJ IDEA
