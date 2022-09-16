@@ -37,32 +37,37 @@ public class SaveCustomerFormController {
 
     //save new customer
     public void saveCustomerOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
-        String id = txtCustomerId.getText();
 
-        if (new CustomerController().search(id)) {
-            new Alert(Alert.AlertType.WARNING, "Already Exists..").show();
-        }
-
-        Customer c1 = new Customer(
-                txtCustomerId.getText(),
-                txtCustomerTitle.getText(),
-                txtCustomerName.getText(),
-                txtCustomerAddress.getText(),
-                txtCity.getText(),
-                (String) cmbProvince.getValue(),
-                txtPostalCode.getText()
-        );
-
-        if(new CustomerController().saveCustomer(c1)) {
-            new Alert(Alert.AlertType.CONFIRMATION, "Saved..").showAndWait();
-            txtCustomerId.clear();
-            txtCustomerTitle.clear();
-            txtCustomerName.clear();
-            txtCustomerAddress.clear();
-            txtCity.clear();
-            txtPostalCode.clear();
+        if (txtCustomerId.getText().equals("") || txtCustomerName.getText().equals("") || txtCustomerAddress.getText().equals("") || txtCustomerTitle.getText().equals("") || txtCity.getText().equals("") || txtPostalCode.getText().equals("")){
+            new Alert(Alert.AlertType.WARNING, "All fields are required..").show();
         }else {
-            new Alert(Alert.AlertType.WARNING, "Try Again..").show();
+            String id = txtCustomerId.getText();
+
+            if (new CustomerController().search(id)) {
+                new Alert(Alert.AlertType.WARNING, "Already Exists..").show();
+            }else {
+                Customer c1 = new Customer(
+                        txtCustomerId.getText(),
+                        txtCustomerTitle.getText(),
+                        txtCustomerName.getText(),
+                        txtCustomerAddress.getText(),
+                        txtCity.getText(),
+                        (String) cmbProvince.getValue(),
+                        txtPostalCode.getText()
+                );
+
+                if(new CustomerController().saveCustomer(c1)) {
+                    new Alert(Alert.AlertType.CONFIRMATION, "Saved..").showAndWait();
+                    txtCustomerId.clear();
+                    txtCustomerTitle.clear();
+                    txtCustomerName.clear();
+                    txtCustomerAddress.clear();
+                    txtCity.clear();
+                    txtPostalCode.clear();
+                }else {
+                    new Alert(Alert.AlertType.WARNING, "Try Again..").show();
+                }
+            }
         }
     }
 }

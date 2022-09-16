@@ -47,27 +47,32 @@ public class SaveItemFormController {
 
     //save new Item
     public void saveItemOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
-        Item i1 = new Item(
-                txtItemCode.getText(),
-                (String) cmbDescription.getValue(),
-                Integer.parseInt(txtqtyOnHand.getText()),
-                txtPackSize.getText(),
-                Double.parseDouble(txtUnitPrice.getText()),
-                Double.parseDouble(txtDiscount.getText())
-        );
 
-        if(new ItemController().search(txtItemCode.getText())) {
-            new Alert(Alert.AlertType.WARNING, "Already Exists..").show();
+        if (txtItemCode.getText().equals("") || txtqtyOnHand.getText().equals("") || txtPackSize.getText().equals("") || txtDiscount.getText().equals("") || txtUnitPrice.getText().equals("")){
+            new Alert(Alert.AlertType.WARNING, "All fields are required..").show();
         }else {
-            if (new ItemController().saveItem(i1)){
-                new Alert(Alert.AlertType.CONFIRMATION, "Saved..").showAndWait();
-                txtItemCode.clear();
-                txtPackSize.clear();
-                txtUnitPrice.clear();
-                txtqtyOnHand.clear();
-                txtDiscount.clear();
+            if(new ItemController().search(txtItemCode.getText())) {
+                new Alert(Alert.AlertType.WARNING, "Already Exists..").show();
             }else {
-                new Alert(Alert.AlertType.WARNING, "Try Again..").show();
+                Item i1 = new Item(
+                        txtItemCode.getText(),
+                        (String) cmbDescription.getValue(),
+                        Integer.parseInt(txtqtyOnHand.getText()),
+                        txtPackSize.getText(),
+                        Double.parseDouble(txtUnitPrice.getText()),
+                        Double.parseDouble(txtDiscount.getText())
+                );
+
+                if (new ItemController().saveItem(i1)){
+                    new Alert(Alert.AlertType.CONFIRMATION, "Saved..").showAndWait();
+                    txtItemCode.clear();
+                    txtPackSize.clear();
+                    txtUnitPrice.clear();
+                    txtqtyOnHand.clear();
+                    txtDiscount.clear();
+                }else {
+                    new Alert(Alert.AlertType.WARNING, "Try Again..").show();
+                }
             }
         }
     }
