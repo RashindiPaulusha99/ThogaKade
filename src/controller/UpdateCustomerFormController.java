@@ -59,27 +59,36 @@ public class UpdateCustomerFormController {
     }
 
     public void updateCustomerOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
-        Customer c1 = new Customer(
-                txtId.getText(),
-                txtTitle.getText(),
-                txtName.getText(),
-                txtAddress.getText(),
-                txtCity.getText(),
-                cmbProvince.getValue(),
-                txtPostalCode.getText()
-        );
 
-        //data of textFields pass to updateCustomer method to update and show alert if it updated or not
-        if (new CustomerController().updateCustomer(c1)) {
-            new Alert(Alert.AlertType.CONFIRMATION, "Updated..").showAndWait();
-            txtId.clear();
-            txtTitle.clear();
-            txtName.clear();
-            txtAddress.clear();
-            txtCity.clear();
-            txtPostalCode.clear();
+        if (txtId.getText().equals("") || txtName.getText().equals("") || txtAddress.getText().equals("") || txtCity.getText().equals("") || txtTitle.getText().equals("") || txtPostalCode.getText().equals("")){
+            new Alert(Alert.AlertType.CONFIRMATION, "All fields are required..").showAndWait();
         }else {
-            new Alert(Alert.AlertType.WARNING, "Try Again").show();
+            if (new CustomerController().search(txtId.getText())){
+                new Alert(Alert.AlertType.CONFIRMATION, "Already Exists..").showAndWait();
+            }else {
+                Customer c1 = new Customer(
+                        txtId.getText(),
+                        txtTitle.getText(),
+                        txtName.getText(),
+                        txtAddress.getText(),
+                        txtCity.getText(),
+                        cmbProvince.getValue(),
+                        txtPostalCode.getText()
+                );
+
+                //data of textFields pass to updateCustomer method to update and show alert if it updated or not
+                if (new CustomerController().updateCustomer(c1)) {
+                    new Alert(Alert.AlertType.CONFIRMATION, "Updated..").showAndWait();
+                    txtId.clear();
+                    txtTitle.clear();
+                    txtName.clear();
+                    txtAddress.clear();
+                    txtCity.clear();
+                    txtPostalCode.clear();
+                }else {
+                    new Alert(Alert.AlertType.WARNING, "Try Again").show();
+                }
+            }
         }
     }
 }
