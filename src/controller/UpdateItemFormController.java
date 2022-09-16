@@ -69,25 +69,29 @@ public class UpdateItemFormController {
     }
 
     public void updateItemOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
-        Item i1 = new Item(
-                txtCode.getText(),
-                (String) cmbDescription.getValue(),
-                Integer.parseInt(txtqtyOnHand.getText()),
-                txtPackSize.getText(),
-                Double.parseDouble(txtUnitPrice.getText()),
-                Double.parseDouble(txtDiscount.getText())
-        );
-
         //data of textFields pass to updateItem method to update and show alert if it updated or not
-        if (new ItemController().updateItem(i1)) {
-            new Alert(Alert.AlertType.CONFIRMATION, "Updated..").showAndWait();
-            txtCode.clear();
-            txtPackSize.clear();
-            txtUnitPrice.clear();
-            txtDiscount.clear();
-            txtqtyOnHand.clear();
+        if (txtCode.getText().equals("") || cmbDescription.getValue().equals("") || txtqtyOnHand.getText().equals("") || txtPackSize.getText().equals("") || txtUnitPrice.getText().equals("") || txtDiscount.getText().equals("") ){
+            new Alert(Alert.AlertType.WARNING, "All fields are required").show();
         }else {
-            new Alert(Alert.AlertType.WARNING, "Try Again").show();
+            Item i1 = new Item(
+                    txtCode.getText(),
+                    (String) cmbDescription.getValue(),
+                    Integer.parseInt(txtqtyOnHand.getText()),
+                    txtPackSize.getText(),
+                    Double.parseDouble(txtUnitPrice.getText()),
+                    Double.parseDouble(txtDiscount.getText())
+            );
+
+            if (new ItemController().updateItem(i1)) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Updated..").showAndWait();
+                txtCode.clear();
+                txtPackSize.clear();
+                txtUnitPrice.clear();
+                txtDiscount.clear();
+                txtqtyOnHand.clear();
+            }else {
+                new Alert(Alert.AlertType.WARNING, "Try Again").show();
+            }
         }
     }
 }
