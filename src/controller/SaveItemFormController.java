@@ -47,12 +47,6 @@ public class SaveItemFormController {
 
     //save new Item
     public void saveItemOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
-        String id = txtItemCode.getText();
-
-        if (new ItemController().search(id)) {
-            new Alert(Alert.AlertType.WARNING, "Already Exists..").show();
-        }
-
         Item i1 = new Item(
                 txtItemCode.getText(),
                 (String) cmbDescription.getValue(),
@@ -62,15 +56,19 @@ public class SaveItemFormController {
                 Double.parseDouble(txtDiscount.getText())
         );
 
-        if(new ItemController().saveItem(i1)) {
-            new Alert(Alert.AlertType.CONFIRMATION, "Saved..").showAndWait();
-            txtItemCode.clear();
-            txtPackSize.clear();
-            txtUnitPrice.clear();
-            txtqtyOnHand.clear();
-            txtDiscount.clear();
+        if(new ItemController().search(txtItemCode.getText())) {
+            new Alert(Alert.AlertType.WARNING, "Already Exists..").show();
         }else {
-            new Alert(Alert.AlertType.WARNING, "Try Again..").show();
+            if (new ItemController().saveItem(i1)){
+                new Alert(Alert.AlertType.CONFIRMATION, "Saved..").showAndWait();
+                txtItemCode.clear();
+                txtPackSize.clear();
+                txtUnitPrice.clear();
+                txtqtyOnHand.clear();
+                txtDiscount.clear();
+            }else {
+                new Alert(Alert.AlertType.WARNING, "Try Again..").show();
+            }
         }
     }
 }
