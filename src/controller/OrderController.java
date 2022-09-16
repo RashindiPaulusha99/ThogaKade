@@ -85,23 +85,23 @@ public class OrderController {
                 throwables.printStackTrace();
             }
         }
-        return false;
+        return true;
     }
 
     private boolean saveOrderDetails(String orderId , ArrayList<ItemDetails> items) throws SQLException, ClassNotFoundException {
         //data pass itemDetails table
         for (ItemDetails temp : items) {
-            PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("INSERT INTO `Order Detail` VALUES(?,?,?,?,?)");
+            PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("INSERT INTO `orderdetail` VALUES(?,?,?,?,?)");
             stm.setObject(1,temp.getItemCode());
-            stm.setObject(2,orderId);
-            stm.setObject(3,temp.getQtyForSell());
+            stm.setObject(2,(temp.getDiscount()*temp.getQtyForSell()));
+            stm.setObject(3,orderId);
             stm.setObject(4,temp.getUnitPrice());
-            stm.setObject(5,temp.getDiscount()*temp.getQtyForSell());
+            stm.setObject(5,temp.getQtyForSell());
 
             if(stm.executeUpdate()>0){
 
                 if (updateQty(temp.getItemCode(),temp.getQtyForSell())){
-
+                    return true;
                 }else {
                     return false;
                 }
@@ -133,7 +133,7 @@ public class OrderController {
     }
 
     public List<String> searchOrderDetails(String oid) throws SQLException, ClassNotFoundException {
-        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM `Order Detail`  WHERE orderId='" + oid + "'");
+        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM `orderdetail`  WHERE orderId='" + oid + "'");
         ResultSet rst = stm.executeQuery();
         List<String> item = new ArrayList<>();
         while (rst.next()){
@@ -147,7 +147,7 @@ public class OrderController {
     }
 
     public List<String> searchOrderDetail(String oid) throws SQLException, ClassNotFoundException {
-        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM `Order Detail`  WHERE orderId='" + oid + "'");
+        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM `orderdetail`  WHERE orderId='" + oid + "'");
         ResultSet rst = stm.executeQuery();
         List<String> orderDetails = new ArrayList<>();
         while (rst.next()){
@@ -161,7 +161,7 @@ public class OrderController {
     }
 
     public ArrayList<Table> getDetails() throws SQLException, ClassNotFoundException {
-        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement(" SELECT o.orderId,o.cId,o.orderDate,o.ordertime,c.itemCode,c.qty,c.price,c.discount,o.cost FROM `Order` o LEFT JOIN `order detail` c ON o.orderId=c.orderId");
+        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement(" SELECT o.orderId,o.cId,o.orderDate,o.ordertime,c.itemCode,c.qty,c.price,c.discount,o.cost FROM `Order` o LEFT JOIN `orderdetail` c ON o.orderId=c.orderId");
         ResultSet rst = stm.executeQuery();
         ArrayList<Table> items = new ArrayList<>();
         while (rst.next()) {
@@ -190,7 +190,7 @@ public class OrderController {
     }
 
     public String mostMovableItems() throws SQLException, ClassNotFoundException {
-        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement(" SELECT itemCode ,COUNT(qty) FROM `order detail` GROUP BY (itemCode) ORDER BY qty DESC LIMIT 1");
+        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement(" SELECT itemCode ,COUNT(qty) FROM `orderdetail` GROUP BY (itemCode) ORDER BY qty DESC LIMIT 1");
         ResultSet rst = stm.executeQuery();
         if (rst.next()){
             return rst.getString(1);
@@ -199,7 +199,7 @@ public class OrderController {
     }
 
     public String leastMovableItems() throws SQLException, ClassNotFoundException {
-        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement(" SELECT itemCode ,COUNT(qty) FROM `order detail` GROUP BY (itemCode) ORDER BY qty ASC LIMIT 1");
+        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement(" SELECT itemCode ,COUNT(qty) FROM `orderdetail` GROUP BY (itemCode) ORDER BY qty ASC LIMIT 1");
         ResultSet rst = stm.executeQuery();
        if (rst.next()){
             return rst.getString(1);
@@ -238,7 +238,7 @@ public class OrderController {
     }
 
     public ArrayList<Bill> setBill(String id) throws SQLException, ClassNotFoundException {
-        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM `order detail` WHERE orderId=?");
+        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM `orderdetail` WHERE orderId=?");
         stm.setObject(1, id);
         ResultSet rst = stm.executeQuery();
         ArrayList<Bill> items = new ArrayList<>();

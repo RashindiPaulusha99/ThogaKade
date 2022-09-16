@@ -297,40 +297,45 @@ public class PlaceOrderFormController {
 
         ArrayList<ItemDetails> items = new ArrayList<>();//create arraylist to put items
 
-        for (CartTM tempTm : obList) {
-            ttotal+=tempTm.getTotal();
-            allDiscount+=tempTm.getSave();
-            //add all table details to arraylist
-            items.add(new ItemDetails(
-                    tempTm.getCode(),
-                    tempTm.getUnitPrice(),
-                    tempTm.getDiscount(),
-                    tempTm.getQty()
-            ));
-        }
-
-        //create order object
-        order = new Order(
-                lblOrderId.getText(),
-                cmbCustomerId.getValue(),
-                lblOrderDate.getText(),
-                lblOrderTime.getText(),
-                ttotal,
-                items
-        );
-
-        if (new OrderController().placeOrder(order)) {
-            new Alert(Alert.AlertType.CONFIRMATION, "Success.").showAndWait();
-            setOrderId();
-
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/PaymentOptionForm.fxml"));
-            Parent parent = loader.load();
-            PaymentOptionFormController controller = loader.<PaymentOptionFormController>getController();
-            controller.setData(order);
-            Stage window = (Stage) placeOrderContext.getScene().getWindow();
-            window.setScene(new Scene(parent));
+        if (cmbCustomerId.getValue() == "" || cmbItemCode.getValue() == "" || tblItemDetail.getItems().isEmpty()){
+            new Alert(Alert.AlertType.WARNING, "All fields are required.").showAndWait();
         }else {
-            new Alert(Alert.AlertType.WARNING,"Try Again").show();
+
+            for (CartTM tempTm : obList) {
+                ttotal+=tempTm.getTotal();
+                allDiscount+=tempTm.getSave();
+                //add all table details to arraylist
+                items.add(new ItemDetails(
+                        tempTm.getCode(),
+                        tempTm.getUnitPrice(),
+                        tempTm.getDiscount(),
+                        tempTm.getQty()
+                ));
+            }
+
+            //create order object
+            order = new Order(
+                    lblOrderId.getText(),
+                    cmbCustomerId.getValue(),
+                    lblOrderDate.getText(),
+                    lblOrderTime.getText(),
+                    ttotal,
+                    items
+            );
+
+            if (new OrderController().placeOrder(order)) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Success.").showAndWait();
+                setOrderId();
+
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/PaymentOptionForm.fxml"));
+                Parent parent = loader.load();
+                PaymentOptionFormController controller = loader.<PaymentOptionFormController>getController();
+                controller.setData(order);
+                Stage window = (Stage) placeOrderContext.getScene().getWindow();
+                window.setScene(new Scene(parent));
+            }else {
+                new Alert(Alert.AlertType.WARNING,"Try Again").show();
+            }
         }
     }
 }

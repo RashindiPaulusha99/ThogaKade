@@ -45,7 +45,7 @@ public class FinalBillFormController {
     public void setData(String oId, String date, String time, double total,String payment) throws SQLException, ClassNotFoundException {
         lblBillId.setText(oId);
         lblBillDate.setText(date);
-        lblBillTime.setText(date);
+        lblBillTime.setText(time);
         double amount = total;
         lblNetAmount.setText(String.valueOf(amount)+" /=");
         lblPayment.setText(payment);
